@@ -28,7 +28,7 @@ if SameLoadCurve=="yes":
 		scale=np.array([active_power_time_series[t][0] for t in range(len(active_power_time_series))])
 		scale=scale/np.max(scale)
 		ap=np.array([[scale[t] for n in range(len(maxP))] for t in range(len(active_power_time_series))])
-		aq=np.array([[1 for n in range(len(maxP))] for t in range(len(active_power_time_series))])
+		aq=np.array([[scale[t] for n in range(len(maxP))] for t in range(len(active_power_time_series))])
 		P_profiles1=maxP*ap
 		Q_profiles1=maxQ*aq
 	Param.P_profiles=P_profiles1[:,:-1]
