@@ -31,13 +31,13 @@ if SameLoadCurve=="yes":
 		aq=np.array([[scale[t] for n in range(len(maxP))] for t in range(len(active_power_time_series))])
 		P_profiles1=maxP*ap
 		Q_profiles1=maxQ*aq
-	Param.P_profiles=P_profiles1[:,:-1]
-	Param.Q_profiles=Q_profiles1[:,:-1]
+	Param.P_profiles=P_profiles1[:,1:]
+	Param.Q_profiles=Q_profiles1[:,1:]
 else:
 	P_profiles1=maxP*active_power_time_series
 	Q_profiles1=maxQ*reactive_power_time_series
-	Param.P_profiles=P_profiles1[:,:-1]
-	Param.Q_profiles=Q_profiles1[:,:-1]
+	Param.P_profiles=P_profiles1[:,1:]
+	Param.Q_profiles=Q_profiles1[:,1:]
 
 
 #PV--WT
