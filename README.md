@@ -1,4 +1,4 @@
-# load_DG_DATA
+# Load-DG DATA needed for LV and MV distribution grids
 
 Description
 
